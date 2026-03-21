@@ -1,0 +1,9 @@
+[config]
+
+[templates.alacritty]
+input_path  = "~/.config/noctalia/templates/alacritty.toml"
+output_path = "~/.config/alacritty/themes/noctalia.toml"
+
+[templates.yazi]
+input_path  = "~/.config/noctalia/templates/yazi-theme.toml"
+output_path = "~/.config/yazi/theme.toml"
