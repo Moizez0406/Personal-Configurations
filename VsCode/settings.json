@@ -1,0 +1,116 @@
+{
+  // ==========================================
+  // 1. VIM EMULATION & NAVIGATION
+  // ==========================================
+  "editor.lineNumbers": "relative",
+  "vim.leader": "<Space>",
+  "vim.hlsearch": true,
+
+  "vim.normalModeKeyBindingsNonRecursive": [
+    // Buffer Navigation (Shift + h/l)
+    { "before": ["<S-h>"], "commands": [":bprevious"] },
+    { "before": ["<S-l>"], "commands": [":bnext"] },
+
+    // Window Splits
+    { "before": ["leader", "v"], "commands": [":vsplit"] },
+    { "before": ["leader", "s"], "commands": [":split"] },
+
+    // Pane Focus (Leader + hjkl)
+    { "before": ["leader", "h"], "commands": ["workbench.action.focusLeftGroup"] },
+    { "before": ["leader", "j"], "commands": ["workbench.action.focusBelowGroup"] },
+    { "before": ["leader", "k"], "commands": ["workbench.action.focusAboveGroup"] },
+    { "before": ["leader", "l"], "commands": ["workbench.action.focusRightGroup"] },
+
+    // File Operations & Quick Actions
+    { "before": ["leader", "w"], "commands": [":w!"] },
+    { "before": ["leader", "q"], "commands": [":q!"] },
+    { "before": ["leader", "x"], "commands": [":x!"] },
+    { "before": ["leader", "f"], "commands": ["workbench.action.quickOpen"] },
+    { "before": ["leader", "p"], "commands": ["editor.action.formatDocument"] },
+
+    // Diagnostics & Hover
+    { "before": ["[", "d"], "commands": ["editor.action.marker.prev"] },
+    { "before": ["]", "d"], "commands": ["editor.action.marker.next"] },
+    { "before": ["leader", "c", "a"], "commands": ["editor.action.quickFix"] },
+    { "before": ["g", "h"], "commands": ["editor.action.showDefinitionPreviewHover"] }
+  ],
+
+  "vim.visualModeKeyBindings": [
+    // Indenting (Stay in visual mode)
+    { "before": ["<"], "commands": ["editor.action.outdentLines"] },
+    { "before": [">"], "commands": ["editor.action.indentLines"] },
+    // Move Lines (J/K)
+    { "before": ["J"], "commands": ["editor.action.moveLinesDownAction"] },
+    { "before": ["K"], "commands": ["editor.action.moveLinesUpAction"] },
+    // Comments
+    { "before": ["leader", "c"], "commands": ["editor.action.commentLine"] }
+  ],
+
+  // ==========================================
+  // 2. EDITOR LOOK & FEEL (TYPOGRAPHY)
+  // ==========================================
+  "editor.fontSize": 16,
+  "editor.lineHeight": 1.5,
+  "editor.letterSpacing": 0.5,
+  "editor.fontFamily": "'DankMono Nerd Font', monospace",
+  "editor.fontLigatures": true,
+  "editor.semanticHighlighting.enabled": true,
+  "editor.renderWhitespace": "none",
+  "editor.minimap.enabled": false,
+  "editor.inlineSuggest.enabled": true,
+
+  // ==========================================
+  // 3. WORKBENCH & UI (THEMING)
+  // ==========================================
+  "workbench.colorTheme": "Catppuccin Macchiato",
+  "workbench.iconTheme": "catppuccin-macchiato",
+  "workbench.editor.showTabs": "single",
+  "workbench.editor.editorActionsLocation": "hidden",
+  "workbench.layoutControl.enabled": false,
+  
+  "window.titleBarStyle": "native",
+  "window.menuBarVisibility": "toggle",
+  "window.commandCenter": false,
+  "workbench.browser.showInTitleBar": false,
+
+  "catppuccin.colorOverrides": {
+    "macchiato": { "base": "#292D3E" }
+  },
+
+  // ==========================================
+  // 4. TERMINAL
+  // ==========================================
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+  "terminal.integrated.fontFamily": "JetBrains Mono",
+  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.tabs.defaultIcon": "terminal-bash",
+  "terminal.integrated.minimumContrastRatio": 1,
+
+  // ==========================================
+  // 5. LANGUAGES & FORMATTING
+  // ==========================================
+  "editor.formatOnSave": true,
+
+  "[python]": {
+    "editor.formatOnType": true,
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  },
+  "[javascript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[html]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[css]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[json]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[json5]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+
+  "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, IndentWidth: 4 }",
+
+  // ==========================================
+  // 6. SYSTEM & EXTENSIONS
+  // ==========================================
+  "git.enableSmartCommit": true,
+  "github.copilot.editor.enableAutoCompletions": true,
+  "explorer.confirmDelete": false,
+  "security.workspace.trust.untrustedFiles": "open",
+  "redhat.telemetry.enabled": false,
+  "http.proxySupport": "off",
+  "workbench.activityBar.location": "hidden"
+}
