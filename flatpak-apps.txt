@@ -1,0 +1,2 @@
+com.nvidia.geforcenow/x86_64/master
+io.github.realmazharhussain.GdmSettings/x86_64/stable
